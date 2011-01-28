@@ -14,7 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="confirmInput">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -57,80 +57,10 @@
         <height>201</height>
        </rect>
       </property>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>New Item</string>
-       </property>
-      </item>
      </widget>
     </widget>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="inputTextArea">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -140,7 +70,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QLabel" name="displayedWord">
     <property name="geometry">
      <rect>
       <x>30</x>
@@ -153,17 +83,56 @@
      <string>Word</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_2">
+   <widget class="QLabel" name="pointsLabel">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>50</y>
+      <x>260</x>
+      <y>30</y>
       <width>62</width>
       <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>Points</string>
+     <string>Points:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="timeLeftLabel">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>10</y>
+      <width>62</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Time left:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="timeLabel">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>10</y>
+      <width>41</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>1:00</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="totalPointsLabel">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>30</y>
+      <width>62</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>0</string>
     </property>
    </widget>
   </widget>
@@ -193,5 +162,25 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>confirmInput</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>buttonClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>238</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>169</x>
+     <y>256</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>buttonClicked()</slot>
+ </slots>
 </ui>

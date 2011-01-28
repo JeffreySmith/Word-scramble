@@ -11,8 +11,10 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    scrambledword.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    scrambledword.h
 
 FORMS    += mainwindow.ui
