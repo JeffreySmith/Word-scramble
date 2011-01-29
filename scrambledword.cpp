@@ -1,6 +1,8 @@
 #include "scrambledWord.h"
 #include <iostream>
 #include <ctime>
+#include <ctype.h>
+#include <algorithm>
 using namespace std;
 scrambledWord::scrambledWord()
 {
@@ -18,6 +20,7 @@ string scrambledWord::getScrambledWord()
 void scrambledWord::setWord(std::string word)
 {
     regularString=word;
+    std::transform(regularString.begin(),regularString.end(),regularString.begin(),::tolower);
     wordLength=regularString.length();
     bool positions[regularString.length()];
     int counter=regularString.length();

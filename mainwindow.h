@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "scrambledword.h"
+#include "admindialog.h"
 namespace Ui {
     class MainWindow;
 }
@@ -23,6 +24,7 @@ private:
     Ui::MainWindow *ui;
     int points;
     QTimer *timer;
+    AdminDialog *checkStatus;
 };
 
 #endif // MAINWINDOW_H

@@ -12,9 +12,12 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    scrambledword.cpp
+    scrambledword.cpp \
+    admindialog.cpp
 
 HEADERS  += mainwindow.h \
-    scrambledword.h
+    scrambledword.h \
+    admindialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    admindialog.ui
