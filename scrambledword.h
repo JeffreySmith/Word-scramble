@@ -9,9 +9,12 @@ public:
     std::string getScrambledWord();
     void setWord(std::string);
     int wordLength;
+    void setCategory(std::string);
+    std::string getCategory();
 private:
     std::string regularString;
     std::string scrambledString;
+    std::string category;
 };
 
 #endif // SCRAMBLEDWORD_H

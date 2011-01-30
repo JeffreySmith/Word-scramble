@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include "scrambledword.h"
 #include "admindialog.h"
+#include "loadfiles.h"
+
 namespace Ui {
     class MainWindow;
 }
@@ -20,9 +22,14 @@ public:
 public slots:
     void buttonClicked();
     void setTime();
+    void openDialogue();
+    void checkAdminStatus();
 private:
     Ui::MainWindow *ui;
-    int points;
+    //bool loadFile();
+    int points,index;
+    bool game;
+    loadFiles loadedFiles;
     QTimer *timer;
     AdminDialog *checkStatus;
 };

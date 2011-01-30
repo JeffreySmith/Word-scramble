@@ -13,12 +13,18 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="modal">
+   <bool>true</bool>
+  </property>
   <widget class="QLineEdit" name="passwordEntry">
    <property name="geometry">
     <rect>
      <x>90</x>
      <y>50</y>
-     <width>113</width>
+     <width>144</width>
      <height>22</height>
     </rect>
    </property>
@@ -34,7 +40,7 @@
     <rect>
      <x>90</x>
      <y>10</y>
-     <width>113</width>
+     <width>144</width>
      <height>22</height>
     </rect>
    </property>
@@ -44,8 +50,8 @@
     <rect>
      <x>10</x>
      <y>10</y>
-     <width>81</width>
-     <height>20</height>
+     <width>71</width>
+     <height>16</height>
     </rect>
    </property>
    <property name="text">
@@ -57,7 +63,7 @@
     <rect>
      <x>10</x>
      <y>50</y>
-     <width>62</width>
+     <width>64</width>
      <height>16</height>
     </rect>
    </property>
@@ -123,6 +129,22 @@
     <hint type="destinationlabel">
      <x>80</x>
      <y>86</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>AdminDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>39</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>28</x>
+     <y>91</y>
     </hint>
    </hints>
   </connection>

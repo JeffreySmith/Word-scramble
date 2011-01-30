@@ -17,6 +17,15 @@ string scrambledWord::getScrambledWord()
 {
     return scrambledString;
 }
+void scrambledWord::setCategory(std::string type)
+{
+    category=type;
+}
+string scrambledWord::getCategory()
+{
+    return category;
+}
+
 void scrambledWord::setWord(std::string word)
 {
     regularString=word;
@@ -24,6 +33,10 @@ void scrambledWord::setWord(std::string word)
     wordLength=regularString.length();
     bool positions[regularString.length()];
     int counter=regularString.length();
+    if(scrambledString.length()>0)
+    {
+        scrambledString="";
+    }
     for(int i=0;i<regularString.length();i++)
     {
             positions[i]=true;

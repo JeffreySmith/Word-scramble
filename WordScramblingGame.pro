@@ -13,11 +13,18 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     scrambledword.cpp \
-    admindialog.cpp
+    admindialog.cpp \
+    adminconfig.cpp \
+    loadfiles.cpp
 
 HEADERS  += mainwindow.h \
     scrambledword.h \
-    admindialog.h
+    admindialog.h \
+    adminconfig.h \
+    loadfiles.h
 
 FORMS    += mainwindow.ui \
-    admindialog.ui
+    admindialog.ui \
+    adminconfig.ui
+
+OTHER_FILES +=
