@@ -52,13 +52,15 @@ void MainWindow::buttonClicked()
         {
 
             index+=2;
-            cout<<"index is"<<index<<endl;
+
             word.setWord(loadedFiles.parsedText[index]);
             word.setCategory(loadedFiles.parsedText[index+1]);
-            ui->displayedWord->clear();
-            cout<<word.getScrambledWord();
+
+
             ui->displayedWord->setText(QString::fromStdString(word.getScrambledWord()));
             ui->categoryLabel->setText(QString::fromStdString(word.getCategory()));
+
+            ui->inputTextArea->setMaxLength(word.getScrambledWord().length());
         }
         else
         {
