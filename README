@@ -1,1 +1,7 @@
-This is my word scrambling game
+This is my word scrambling game for intro to c++
+
+To build this you will need to install Qt: http://qt.nokia.com/products/
+
+This should run on mac, *nixes, and windows, but I haven't tested it on anything but my mac.
+
+run "qmake -project" in this directory, then make (If your platform requires something else, do that instead!)
